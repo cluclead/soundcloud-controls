@@ -1,0 +1,134 @@
+html {
+  height: 100%;
+}
+body {
+  font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  margin: 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+body>* {
+  display: flex;
+  align-items: center;
+}
+#track {
+  flex: 1;
+}
+#player {
+  height: 40px;
+  background-color: #f2f2f2;
+}
+
+[type=range] {
+  flex: 1;
+  margin: 0 15px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+[type=range] * {
+  position: absolute;
+  left: 0;
+  height: 1px;
+  background-color: #f50;
+  pointer-events: none;
+}
+
+[type=range] div[type=overal] {
+  background-color: #ccc;
+  width: 100%;
+}
+[type=range] div[type=partial] {
+  width: 50%;
+}
+[type=range]>span {
+  left: 50%;
+  top: calc(50% - 3px);
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  display: none;
+}
+[type=range]:hover span {
+  display: block;
+}
+
+[class^="icon-"] {
+  font-size: 150%;
+  padding: 12px 5px;
+  cursor: pointer;
+}
+.icon-pause,
+.icon-play {
+  font-size: 200%;
+}
+
+#timer-remains {
+  color: #f50;
+}
+table td {
+  text-indent: 10px;
+}
+#img {
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+}
+#volume {
+  position: relative;
+}
+#volume>div {
+  background-color: #f2f2f2;
+  position: absolute;
+  right: -22px;
+  bottom: 65px;
+  width: 80px;
+  height: 30px;
+  transform: rotate(270deg);
+  border: 1px solid rgba(0,0,0,.15);
+  display: none;
+}
+#volume>div:after {
+  display: block;
+  width: 10px;
+  height: 10px;
+  content: ' ';
+  position: absolute;
+  left: -7px;
+  top: 9px;
+  background-color: #f2f2f2;
+  border: 1px solid #000;
+  border-color: transparent transparent #ccc #ccc;
+  box-shadow: -3px 3px 4px rgba(0,0,0, .1);
+  transform: rotate(45deg);
+}
+#volume:hover>div {
+  display: block;
+  cursor: not-allowed;
+}
+[data-cmd=like][data-liked=true] {
+  color: #f50;
+}
+
+#no-connect {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 130%;
+  color: #fff;
+  cursor: pointer;
+  margin: 0;
+}

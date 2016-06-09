@@ -1,0 +1,14 @@
+{
+  "title": "SoundCloud Controls",
+  "name": "iscontrols",
+  "description": "Control soundcloud.com from within a toolbar panel",
+  "id": "jid1-hHwww2ffttmnbBi4d@jetpack",
+  "license": "Mozilla Public License, version 2.0",
+  "version": "0.1.0.1",
+  "author": "Morni Colhkher",
+  "main": "./lib/background.js",
+  "url": "http://add0n.com/soundcloud.html",
+  "permissions": {
+    "private-browsing": true
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "SoundCloud Controls",
+  "short_name": "iscontrols",
+  "description": "Control soundcloud.com from within a toolbar panel",
+  "author": "Morni Colhkher",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "storage",
+    "tabs",
+    "notifications",
+    "http://soundcloud.com/*",
+    "https://soundcloud.com/*"
+  ],
+  "web_accessible_resources": [],
+  "browser_action": {
+    "default_icon": {
+      "16": "data/icons/16.png",
+      "32": "data/icons/32.png"
+    },
+    "default_popup": "data/popup/index.html"
+  },
+  "background": {
+    "scripts": [
+        "lib/chrome/EventEmitter.js",
+        "lib/chrome/definitions.js",
+        "lib/chrome/chrome.js"
+      ]
+  },
+  "content_scripts": [{
+    "matches": ["http://soundcloud.com/*", "https://soundcloud.com/*"],
+    "js": ["data/content_script/chrome/chrome.js", "data/content_script/inject.js"],
+    "run_at": "document_start",
+    "all_frames": false
+  }],
+  "homepage_url": "http://add0n.com/soundcloud.html",
+  "icons": {
+    "16": "data/icons/16.png",
+    "48": "data/icons/48.png",
+    "128": "data/icons/128.png"
+  }
+}

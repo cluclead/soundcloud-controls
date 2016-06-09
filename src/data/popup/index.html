@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="index.css">
+    <title>player</title>
+  </head>
+  <body>
+    <div id="track">
+      <table>
+  <col width="100px">
+  <col>
+        <tr>
+          <td id="img" rowspan="2"></td>
+          <td id="context" style="vertical-align: bottom;"></td>
+        </tr>
+        <tr>
+          <td id="ttl" style="vertical-align: top;"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="player">
+      <span data-cmd=previous class="icon-to-start"></span>
+      <span data-cmd=play type=play class="icon-play"></span>
+      <span data-cmd=next class="icon-to-end"></span>
+      <span id="timer-remains">00:00</span>
+      <div type=range>
+        <div type="overal"></div>
+        <div type="partial"></div>
+        <span></span>
+      </div>
+      <span id="timer-total">00:00</span>
+      <span data-cmd=like class="icon-heart"></span>
+      <span type=volume id="volume" class="icon-volume-off">
+        <div>
+          <div type=range>
+            <div type="overal"></div>
+            <div type="partial"></div>
+            <span></span>
+          </div>
+        </div>
+      </span>
+    </div>
+    <pre id="no-connect">
+Disconnected ...
+&#8594; Click here to open soundcloud.com
+&#8594; If soundcloud.com is open play a sound
+    </pre>
+    <script src="shadow_index.js"></script>
+  </body>
+</html>
